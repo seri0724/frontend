@@ -10,11 +10,11 @@
       <br></br>
     </div>
     <div class="contents">
-      <!-- <ul class="nav nav-tabs">
-        <li><router-link :to="{name:''}" exac>코스추천받기</router-link></li>
+      <ul class="nav nav-tabs">
+        <li><router-link :to="{name:'write'}" exac>코스추천받기</router-link></li>
         <li><router-link :to="{name:''}">추천코스</router-link><li>
         <li><router-link :to="{name:''}">My코스</router-link></li>
-      </ul> -->
+      </ul>
       <transition name="fade">
         <router-view></router-view>
       </transition>

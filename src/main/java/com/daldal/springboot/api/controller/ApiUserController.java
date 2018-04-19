@@ -61,17 +61,18 @@ public class ApiUserController {
 		return "";
 	}
 	
-	@RequestMapping(value="/join",method=RequestMethod.GET)
+	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public UserJoinDto join(@RequestBody UserJoinDto userjoindto) {
 		System.out.println(userjoindto.toString());
 		return userjoindto;
 	}
 	
 	@RequestMapping(value="/write")
-	public WriteMongoDto write(@RequestBody WriteMongoDto writemongodto) {
-		System.out.println(writemongodto.toString());
+	public String write(@RequestBody Map<String, String> map) { //WriteMongoDto writemongodto
+		JSONObject json = new JSONObject(map);
+		System.out.println(json.toString());
 		//세션에서 아이디값 받아와서 dto에 넣어줘야함
-		return writemongodto;
+		return json.toString();
 	}
 	
 	
