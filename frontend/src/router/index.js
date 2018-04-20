@@ -6,6 +6,7 @@ import Main from '@/components/Main'
 import Login from '@/components/Login'
 import Join from '@/components/Join'
 import Write from '@/components/Write'
+import Route from '@/components/Route'
 
 // axios import
 import axios from 'axios'
@@ -37,7 +38,12 @@ export default new Router({
     {
       path:'/user/write',
       name:'Write',
-      component:Join
+      component:Write
+    },
+    {
+      path:'/user/route',
+      name:'Route',
+      component:Route
     }
   ]
 })

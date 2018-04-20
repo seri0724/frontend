@@ -25,17 +25,22 @@
       pwRules: [
         v => !!v || '비밀번호를 작성해주세요.',
         v => v.length <= 14 || '8~14자리를 입력해주세요.'
-      ]
+      ],
+      lat:'127.0352915',
+      lng:'37.5360206',
+      dong:'역삼동'
     }),
     methods: {
       login () { // 클릭 : 로그인 완료
         if(this.$refs.form.validate()) {
           this.$axios.post('/api/user/login', {
             id:this.id,
-            pw:this.pw
+            pw:this.pw,
+            lat:this.lat,
+            lng:this.lng,
+            dong:this.dong
           }) .then((response) => {
-
-              console.log('login')
+              console.log('loginOK')
               this.result = response.data
               console.log(this.result)
 

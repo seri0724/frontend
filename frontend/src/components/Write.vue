@@ -1,4 +1,5 @@
 <template>
+
   <div id="write" style="width:450px; display:inline-block;">
     <br></br>
       <h1>작성란</h1>
@@ -24,10 +25,6 @@
 
 <script>
   export default {
-    // name:'Write',
-    // created () {
-    //   this.$eventBus.$emit('Main');
-    // },
     data: () => ({
       valid:false,
       division:'연인',
@@ -86,7 +83,6 @@
             id:'testId',
             division:this.division,
             month:this.month,
-            date:this.date,
             day:this.day,
             starttime:this.starttime,
             endtime:this.endtime,
@@ -98,7 +94,7 @@
             dong:this.dong,
             radius:this.radius
           }).then((response) => {
-              console.log('ok')
+              console.log('writeOK')
               this.result = response.data
               console.log(this.result)
           })

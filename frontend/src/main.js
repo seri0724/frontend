@@ -10,6 +10,7 @@ import Main from './components/Main.vue'
 import Login from './components/Login.vue'
 import Join from './components/Join.vue'
 import Write from './components/Write.vue'
+import Route from './components/Route.vue'
 
 // axios import
 import axios from 'axios'
@@ -33,6 +34,7 @@ const routes = [
     {name:'login', path:'/user/login', component:Login},
     {name:'join', path:'/user/join', component:Join},
     {name:'write', path:'/user/write', component:Write},
+    {name:'route', path:'/user/route', component:Route}
   ]
 
 // 라우터 객체 생성

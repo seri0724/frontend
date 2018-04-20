@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <br></br>
-    <h1>{{msg}}</h1>
+      <h1>{{msg}}</h1>
     <br></br>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
   export default {
     name:'main',
-    data() {
+    data () {
       return {
         msg:'지역검색'
       }

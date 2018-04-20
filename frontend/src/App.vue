@@ -6,13 +6,13 @@
       </ul>
     <div class="visual">
       <br></br>
-      <router-link :to="{name:'main'}" class="logo"><img class="logo" src="./assets/logo.png"></router-link>
+        <router-link :to="{name:'main'}" class="logo"><img class="logo" src="./assets/logo.png"></router-link>
       <br></br>
     </div>
     <div class="contents">
       <ul class="nav nav-tabs">
         <li><router-link :to="{name:'write'}" exac>코스추천받기</router-link></li>
-        <li><router-link :to="{name:''}">추천코스</router-link><li>
+        <li><router-link :to="{name:'route'}">추천코스</router-link><li>
         <li><router-link :to="{name:''}">My코스</router-link></li>
       </ul>
       <transition name="fade">

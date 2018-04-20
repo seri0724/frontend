@@ -21,7 +21,7 @@ import com.daldal.springboot.uservo.UserLoginVo;
 import com.daldal.springboot.writedto.WriteMongoDto;
 
 @RestController
-@RequestMapping(value="/api/user")
+@RequestMapping(value="/api/course")
 public class ApiUserController {
 
 	@Autowired
@@ -47,12 +47,15 @@ public class ApiUserController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public UserLoginVo login(@RequestBody UserLoginDto userlogindto, HttpSession session) {
-		System.out.println(userlogindto.toString());
-		UserLoginVo userloginvo = userservice.loginsession(userlogindto);
-		session.setAttribute("authUser", userloginvo);
+	public UserLoginVo login(@RequestBody Map<String, String> map, HttpSession session) {
+		System.out.println(map.toString());
+		JSONObject json = new JSONObject(map);
+		System.out.println(json.toString());
 		
-		return userloginvo;
+		/*UserLoginVo userloginvo = userservice.loginsession(userlogindto);
+		session.setAttribute("authUser", userloginvo);*/
+		
+		return null;
 	}
 	
 	@RequestMapping(value="/logout")
@@ -72,6 +75,13 @@ public class ApiUserController {
 		JSONObject json = new JSONObject(map);
 		System.out.println(json.toString());
 		//세션에서 아이디값 받아와서 dto에 넣어줘야함
+		return json.toString();
+	}
+	
+	@RequestMapping(value="/store",method=RequestMethod.POST)
+	public String store(@RequestBody Map<String, String> map) {
+		JSONObject json = new JSONObject(map);
+		
 		return json.toString();
 	}
 	
