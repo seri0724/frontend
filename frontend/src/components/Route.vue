@@ -4,10 +4,10 @@
       <h1>추천코스</h1>
     <br></br>
       <v-form v-model="valid" ref="form">
-        <!-- <v-text-field label="" v-model="placename1" :rules="placename1Rules"></v-text-field> -->
-         <v-checkbox label="강남역" v-model="placename1" :value=""></v-checkbox>
-        <!-- <v-text-field label="" v-model="placename2" :rules="placename2Rules"></v-text-field> -->
-         <v-checkbox label="비트교육센터" v-model="placename2" :value=""></v-checkbox>
+         <v-checkbox label="김가네" v-model="placename1"></v-checkbox>
+         <v-checkbox label="모스버거" v-model="placename2"></v-checkbox>
+         <v-checkbox label="미스포아이" v-model="placename3"></v-checkbox>
+         <v-checkbox label="비트교육센터" v-model="placename4"></v-checkbox>
         <v-btn @click="submit" :disabled="!valid">확인</v-btn>
       </v-form>
     <pre>{{$data}}</pre>
@@ -18,23 +18,21 @@
   export default {
     data: () => ({
       valid:false,
-      // placename1:'강남미술관',
-      // placename1Rules: [
-      //
-      // ],
-      // placename2:'비트교육센터',
-      // placename2Rules: [
-      //
-      // ],
-      placename1:'',
-      placename2:''
+      // url_id : 21037816
+      array:[],
+      placename1:'21037816',
+      placename2:'13480693',
+      placename3:'36022489',
+      placename4:'19500744'
     }),
     methods: {
       submit () {
         if(this.$refs.form.validate()) {
           this.$axios.post('/api/course/store', {
             placename1:this.placename1,
-            placename2:this.placename2
+            placename2:this.placename2,
+            placename3:this.placename3,
+            placename4:this.placename4
           }) .then((response) => {
               console.log('routeOK')
               this.result = response.data
