@@ -1,5 +1,4 @@
 <template>
-
   <div id="write" style="width:450px; display:inline-block;">
     <br></br>
       <h1>작성란</h1>

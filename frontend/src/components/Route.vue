@@ -5,9 +5,9 @@
     <br></br>
       <v-form v-model="valid" ref="form">
         <!-- <v-text-field label="" v-model="placename1" :rules="placename1Rules"></v-text-field> -->
-         <v-checkbox label="강남역" v-model="placename1" :value="true"></v-checkbox>
+         <v-checkbox label="강남역" v-model="placename1" :value=""></v-checkbox>
         <!-- <v-text-field label="" v-model="placename2" :rules="placename2Rules"></v-text-field> -->
-         <v-checkbox label="비트교육센터" v-model="placename2" :value="true"></v-checkbox>
+         <v-checkbox label="비트교육센터" v-model="placename2" :value=""></v-checkbox>
         <v-btn @click="submit" :disabled="!valid">확인</v-btn>
       </v-form>
     <pre>{{$data}}</pre>
@@ -17,7 +17,7 @@
 <script>
   export default {
     data: () => ({
-      valid:null,
+      valid:false,
       // placename1:'강남미술관',
       // placename1Rules: [
       //
